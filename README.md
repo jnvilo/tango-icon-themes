@@ -1,6 +1,6 @@
 # Tango Icon Theme & Family #
 
-This is a collection of icon themes that follow the Tango visual guidelines [http://tango-project.org/Tango_Icon_Theme_Guidelines]. 
+This is a collection of icon themes that follow the Tango visual guidelines. 
 
 Included are the following Tango family members in their latest version:
 * Tango [http://tango.freedesktop.org/Tango_Desktop_Project]
