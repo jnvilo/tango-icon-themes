@@ -1,16 +1,12 @@
 # Tango Icon Theme & Family #
 
-This is a collection of icon themes that follow the Tango visual guidelines [1]. 
+This is a collection of icon themes that follow the Tango visual guidelines [http://tango-project.org/Tango_Icon_Theme_Guidelines]. 
 
 Included are the following Tango family members in their latest version:
-* Tango [2]
+* Tango [http://tango.freedesktop.org/Tango_Desktop_Project]
 * Tangerine
 * Industrial
-* Gnome-Colors [3]
-
-[1] http://tango-project.org/Tango_Icon_Theme_Guidelines
-[2] http://tango.freedesktop.org/Tango_Desktop_Project
-[3] https://github.com/gnome-colors/gnome-colors
+* Gnome-Colors [https://github.com/gnome-colors/gnome-colors]
 
 ### Installation ###
 
