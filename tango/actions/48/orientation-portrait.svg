@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="48px"
+   height="48px"
+   id="svg10667"
+   sodipodi:version="0.32"
+   inkscape:version="0.42.2"
+   sodipodi:docbase="/home/andreas/projekt/bild/tango/scalable"
+   sodipodi:docname="orientation-portrait.svg">
+  <defs
+     id="defs10669" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.0000000"
+     inkscape:cx="38.337031"
+     inkscape:cy="14.975669"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:grid-bbox="true"
+     inkscape:document-units="px"
+     inkscape:window-width="1280"
+     inkscape:window-height="885"
+     inkscape:window-x="0"
+     inkscape:window-y="25" />
+  <metadata
+     id="metadata10672">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Orientation Portrait</dc:title>
+        <dc:date>2005-10-10</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Andreas Nilsson</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>orientation</rdf:li>
+            <rdf:li>protrait</rdf:li>
+            <rdf:li>canvas</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <rect
+       style="opacity:1.0000000;fill:#ebebeb;fill-opacity:1.0000000;fill-rule:nonzero;stroke:#6e6e6e;stroke-width:1.0000004;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-dashoffset:0.0000000;stroke-opacity:1.0000000"
+       id="rect11407"
+       width="37.037983"
+       height="43.022232"
+       x="5.4748454"
+       y="3.4888897"
+       rx="1.0714294"
+       ry="1.0357145" />
+    <path
+       style="opacity:1.0000000;fill:#6e6e6e;fill-opacity:1.0000000;fill-rule:nonzero;stroke:none;stroke-width:1.0000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-dashoffset:0.0000000;stroke-opacity:1.0000000"
+       d="M 23.406250,6.0000000 C 17.767965,6.0000000 13.187500,10.600432 13.187500,16.263296 C 13.187500,18.565410 14.098561,20.577083 15.375000,22.289451 C 15.287284,22.396908 9.0732914,28.297614 9.0000000,33.180471 C 9.1722187,38.221295 11.481743,42.011357 16.156250,41.937228 L 31.781250,42.000000 C 35.668471,41.777611 39.129662,37.870969 39.031250,33.126666 C 38.949405,28.273757 31.438988,22.273010 31.500000,22.226678 C 32.745040,20.526565 33.625000,18.534062 33.625000,16.263296 C 33.625000,10.600432 29.044535,5.9999998 23.406250,6.0000000 z "
+       id="path10676"
+       sodipodi:nodetypes="csccccccsc" />
+    <rect
+       style="opacity:1.0000000;fill:none;fill-opacity:1.0000000;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.99999982;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-dashoffset:0.0000000;stroke-opacity:1.0000000"
+       id="rect11409"
+       width="35.185787"
+       height="41.023746"
+       x="6.4126701"
+       y="4.4994636"
+       rx="0.46533713"
+       ry="0.45487571" />
+  </g>
+</svg>

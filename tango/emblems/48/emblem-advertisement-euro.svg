@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   width="48"
+   height="48"
+   id="svg1800">
+  <defs
+     id="defs3">
+    <linearGradient
+       id="linearGradient3101">
+      <stop
+         id="stop3103"
+         style="stop-color:#000000;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop3105"
+         style="stop-color:#000000;stop-opacity:0"
+         offset="1" />
+    </linearGradient>
+    <radialGradient
+       cx="17.3125"
+       cy="25.53125"
+       r="9.6875"
+       fx="17.3125"
+       fy="25.53125"
+       id="radialGradient3107"
+       xlink:href="#linearGradient3101"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.351613,0,16.5541)" />
+    <linearGradient
+       id="linearGradient2591">
+      <stop
+         id="stop2593"
+         style="stop-color:#73d216;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop2595"
+         style="stop-color:#4e9a06;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <radialGradient
+       cx="17.3125"
+       cy="25.53125"
+       r="9.6875"
+       fx="17.3125"
+       fy="25.53125"
+       id="radialGradient2659"
+       xlink:href="#linearGradient3101"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.351613,0,16.5541)" />
+    <radialGradient
+       cx="17.3125"
+       cy="25.53125"
+       r="9.6875"
+       fx="17.3125"
+       fy="25.53125"
+       id="radialGradient3489"
+       xlink:href="#linearGradient3101"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.351613,0,16.5541)" />
+  </defs>
+  <g
+     id="layer1">
+    <path
+       d="M 27,25.53125 A 9.6875,3.40625 0 1 1 7.625,25.53125 A 9.6875,3.40625 0 1 1 27,25.53125 z"
+       transform="matrix(2.18291,0,0,2.18291,-13.5037,-14.3501)"
+       id="path3099"
+       style="opacity:0.40909101;fill:url(#radialGradient3107) #000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.10534;stroke-linecap:butt;stroke-linejoin:miter;marker:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible" />
+    <path
+       d="M 46.138718,23.42804 A 22.008699,21.213203 0 1 1 2.1213188,23.42804 A 22.008699,21.213203 0 1 1 46.138718,23.42804 z"
+       transform="matrix(0.94463,0,0,0.980053,1.50417,-1.55691)"
+       id="path1650"
+       style="opacity:1;fill:#f57900;fill-opacity:1;fill-rule:nonzero;stroke:#914900;stroke-width:0.982149;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       d="M 46.138718,23.42804 A 22.008699,21.213203 0 1 1 2.1213188,23.42804 A 22.008699,21.213203 0 1 1 46.138718,23.42804 z"
+       transform="matrix(0.914086,0,0,0.948364,2.38058,-0.905815)"
+       id="path3392"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#fcaf3e;stroke-width:0.982149;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       d="M 43.676426,20.47678 C 43.676426,31.307396 37.624257,16.170581 25.001688,20.863168 C 12.279172,25.592912 4.4350535,31.307396 4.4350535,20.47678 C 4.4350535,9.6461627 13.22512,0.85609769 24.05574,0.85609769 C 34.886359,0.85609769 43.676426,9.6461627 43.676426,20.47678 z"
+       id="path3068"
+       style="fill:#fffeff;fill-opacity:0.21390399;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       d="M 34.728165,18.772038 C 35.299162,18.050788 35.793243,17.282859 36.210411,16.468251 C 36.627563,15.653665 36.979746,14.807313 37.266958,13.929191 L 34.014275,12.896219 C 33.883006,13.378299 33.798765,13.692842 33.761553,13.83985 C 33.72433,13.986887 33.680536,14.142941 33.630173,14.308013 C 33.5798,14.473113 33.46926,14.823785 33.298551,15.360032 C 33.194019,15.689184 33.042823,16.095247 32.844963,16.578219 C 32.647093,17.061213 32.433036,17.525153 32.20279,17.970041 L 34.728165,18.772038 z"
+       id="text3527"
+       style="font-size:21.19759369px;font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Antique Olive Std Black;-inkscape-font-specification:Antique Olive Std Black Heavy" />
+    <text
+       x="51.694908"
+       y="11.085299"
+       id="text3533"
+       xml:space="preserve"
+       style="font-size:21.19759369px;font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#35fd23;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Antique Olive Std Black;-inkscape-font-specification:Antique Olive Std Black Heavy"><tspan
+         x="51.694908"
+         y="11.085299"
+         id="tspan3535" /></text>
+    <path
+       d="M 38.978165,20.022038 C 39.549162,19.300788 40.043243,18.532859 40.460411,17.718251 C 40.877563,16.903665 41.229746,16.057313 41.516958,15.179191 L 38.264275,14.146219 C 38.133006,14.628299 38.048765,14.942842 38.011553,15.08985 C 37.97433,15.236887 37.930536,15.392941 37.880173,15.558013 C 37.8298,15.723113 37.71926,16.073785 37.548551,16.610032 C 37.444019,16.939184 37.292823,17.345247 37.094963,17.828219 C 36.897093,18.311213 36.683036,18.775153 36.45279,19.220041 L 38.978165,20.022038 z"
+       id="path3550"
+       style="font-size:21.19759369px;font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Antique Olive Std Black;-inkscape-font-specification:Antique Olive Std Black Heavy" />
+    <path
+       d="M 13.833923,18.519948 C 13.262926,17.798698 12.768845,17.030769 12.351677,16.216161 C 11.934525,15.401575 11.582342,14.555223 11.29513,13.677101 L 14.547813,12.644129 C 14.679082,13.126209 14.763323,13.440752 14.800535,13.58776 C 14.837758,13.734797 14.881552,13.890851 14.931915,14.055923 C 14.982288,14.221023 15.092828,14.571695 15.263537,15.107942 C 15.368069,15.437094 15.519265,15.843157 15.717125,16.326129 C 15.914995,16.809123 16.129052,17.273063 16.359298,17.717951 L 13.833923,18.519948 z"
+       id="path3552"
+       style="font-size:21.19759369px;font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Antique Olive Std Black;-inkscape-font-specification:Antique Olive Std Black Heavy" />
+    <path
+       d="M 9.5839239,19.894948 C 9.0129278,19.173698 8.5188468,18.405769 8.1016788,17.591161 C 7.6845268,16.776575 7.3323438,15.930223 7.0451318,15.052101 L 10.297813,14.019129 C 10.429082,14.501209 10.513323,14.815752 10.550535,14.96276 C 10.587758,15.109797 10.631552,15.265851 10.681915,15.430923 C 10.732288,15.596023 10.842828,15.946695 11.013537,16.482942 C 11.118069,16.812094 11.269265,17.218157 11.467125,17.701129 C 11.664995,18.184123 11.879052,18.648063 12.109298,19.092951 L 9.5839239,19.894948 z"
+       id="path3554"
+       style="font-size:21.19759369px;font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Antique Olive Std Black;-inkscape-font-specification:Antique Olive Std Black Heavy" />
+    <path
+       d="M 27.87583,23.643325 L 21.964434,23.643325 C 21.94108,23.39119 21.931741,23.139045 21.936418,22.88689 C 21.93641,22.471329 21.964426,22.069764 22.020466,21.682198 L 28.688298,21.682198 L 29.500764,19.749087 L 22.468724,19.749087 C 22.822418,18.944221 23.319704,18.319697 23.96058,17.87551 C 24.601439,17.431354 25.448925,17.206058 26.503041,17.199622 C 27.511608,17.208393 28.303063,17.344972 28.877406,17.609357 C 29.451722,17.873776 29.892975,18.21347 30.201167,18.628443 L 31.910149,14.566109 C 31.073151,13.547625 30.099592,12.797028 28.98947,12.314314 C 27.879319,11.831642 26.611592,11.592336 25.186285,11.596401 C 23.193048,11.549146 21.457219,12.133983 19.978792,13.35091 C 18.500356,14.567878 17.555981,16.700602 17.145664,19.749087 L 15.772875,19.749087 L 14.960409,21.682198 L 17.005584,21.682198 C 17.004415,21.808864 16.999746,21.940774 16.991575,22.077924 C 16.983401,22.215099 16.978732,22.354012 16.977567,22.494664 C 16.972897,22.89157 16.982235,23.274456 17.005584,23.643325 L 15.716844,23.643325 L 14.87636,25.576436 L 17.201696,25.576436 C 17.47952,27.900026 18.233619,29.7736 19.463997,31.197164 C 20.694364,32.620733 22.499066,33.352653 24.878108,33.392927 C 26.392133,33.361993 27.685542,33.066656 28.758337,32.506917 C 29.831105,31.94718 30.676256,31.308647 31.293794,30.591317 L 31.293794,25.884613 C 30.748048,26.702924 30.053482,27.335619 29.210096,27.782703 C 28.366683,28.229799 27.370944,28.456261 26.222881,28.462094 C 25.076544,28.448674 24.196372,28.181354 23.582362,27.660134 C 22.968334,27.138923 22.522412,26.444357 22.244594,25.576436 L 27.035347,25.576436 L 27.87583,23.643325 z"
+       id="path3610"
+       style="font-size:21.19759369px;font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Antique Olive Std Black;-inkscape-font-specification:Antique Olive Std Black Heavy" />
+  </g>
+</svg>

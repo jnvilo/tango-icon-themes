@@ -1,0 +1,43 @@
+<?xml version="1.0" standalone="no"?>
+<!-- Laoism.deviantART.com 2013-6-23ver.1,6-26v2,6-30v3 -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg id="tango7-zip-48" viewBox="0 0 48 48" style="background-color:#ffffff00" version="1.1"
+	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+	x="0px" y="0px" width="48px" height="48px"
+>
+	<defs>
+		<radialGradient id="shade" cx="50%" cy="40%" r="50%">
+			<stop stop-color="#000000" stop-opacity="0.5" offset="0"/>
+			<stop stop-color="#000000" stop-opacity="0.3" offset="0.3"/>
+			<stop stop-color="#000000" stop-opacity="0" offset="1"/>
+		</radialGradient>
+		<linearGradient id="bg1" x1="0" y1="0" x2="30%" y2="1">
+			<stop stop-color="#babdb6" stop-opacity="1" offset="0"/>
+			<stop stop-color="#888a85" stop-opacity="1" offset="50%"/>
+			<stop stop-color="#555753" stop-opacity="1" offset="1"/>
+		</linearGradient>
+		<linearGradient id="bg2" x1="0.2" y1="0" x2="0.6" y2="1">
+			<stop stop-color="#d3d7cf" stop-opacity="1" offset="0"/>
+			<stop stop-color="#eeeeec" stop-opacity="1" offset="80%"/>
+		</linearGradient>
+		<linearGradient id="yin" x1="0.2" y1="0.3" x2="0.7" y2="1">
+			<stop stop-color="#555753" stop-opacity="1" offset="0"/>
+			<stop stop-color="#2e3436" stop-opacity="1" offset="1"/>
+		</linearGradient>
+		<linearGradient id="yang" x1="0" y1="0" x2="0.5" y2="1">
+			<stop stop-color="#eeeeec" stop-opacity="1" offset="0"/>
+			<stop stop-color="#ffffff" stop-opacity="1" offset="1"/>
+		</linearGradient>
+	</defs>
+	<g id="bg">
+		<rect x="4" y="39" width="40" height="7" fill="url(#shade)"/>
+		<rect x="3" y="7" width="42" height="35" fill="url(#bg1)" rx="2" ry="2"/>
+		<rect x="4" y="8" width="40" height="33" fill="#ffffff" rx="1" ry="1"/>
+		<rect x="5" y="9" width="38" height="31" fill="url(#bg2)"/>
+	</g>
+	<g id="7z">
+		<path d="M 41 38 L 31 38 L 31 35 L 36.5 21 L 31 21 L 31 17 L 41 17 L 41 20 L 35.5 34 L 41 34 L 41 38 Z" fill="url(#yin)"/>
+		<rect x="7" y="10" width="21" height="29" fill="url(#yin)" rx="1" ry="1"/>
+		<path d="M 24 16 L 24 14 L 11 14 L 11 20 L 14.7 20 L 15 17 L 20.3 17 L 14.2 36 L 18 36 L 24 16 Z" fill="url(#yang)"/>
+	</g>
+</svg>
