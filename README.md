@@ -4,7 +4,7 @@ This is a collection of icon themes that follow the Tango visual guidelines [1].
 
 Included are the following Tango family members in their latest version:
 * Tango [2]
-* Tangerine [3]
+* Tangerine
 * Industrial
 * Gnome-Colors [3]
 
