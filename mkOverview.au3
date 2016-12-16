@@ -62,8 +62,8 @@ EndFunc
 Func _GenCats($cat)
    If FileExists(@ScriptDir & "\" & $theme & "\" & $cat) Then
 	  ;get Files
-	  $aReturn = _RecursiveFileListToArray(@ScriptDir & "\" & $theme & "\" & $cat, "\.svg\z", 1) ;"\.png\z|\.svg\z"
-	  If $mode = "compare" Then $aReturnB = _RecursiveFileListToArray(@ScriptDir & "\" & $themeB & "\" & $cat, "\.svg\z", 1) ;"\.png\z|\.svg\z"
+	  $aReturn = _RecursiveFileListToArray(@ScriptDir & "\" & $theme & "\" & $cat, ".png\z|\.svg\z", 1) ;"\.png\z|\.svg\z"
+	  If $mode = "compare" Then $aReturnB = _RecursiveFileListToArray(@ScriptDir & "\" & $themeB & "\" & $cat, ".png\z|\.svg\z", 1) ;"\.png\z|\.svg\z"
 
 	  ;sort & remove duplicates
 	  _ArraySort($aReturn, 0, 1)
@@ -87,15 +87,15 @@ Func _GenCats($cat)
 	  $codeA =  code_Content_Header($cat) & @LF
 
 	  $codeB = ""
-;~ 	  If $theme = "Gnome-Colors" Then
-;~ 		 For $i = 1 to $a_Files[0]
-;~ 			$codeB &= code_Content_GC($a_Files[$i], $cat)
-;~ 		 Next
-;~ 	  Else
+	  If $theme = "Gnome-Colors" Then
+		 For $i = 1 to $a_Files[0]
+			$codeB &= code_Content_GC($a_Files[$i], $cat)
+		 Next
+	  Else
 		 For $i = 1 to $a_Files[0]
 			$codeB &= code_Content($a_Files[$i], $cat)
 		 Next
-;~ 	  EndIf
+	  EndIf
 
 	  $codeC = code_Content_Bottom()
 
@@ -325,21 +325,21 @@ Func code_Content($file, $cat)
    EndIf
 
    ;Theme A
-   $file_16 = @ScriptDir & "\" & $theme & "\" & $cat & "\16\" & $file
+   $file_16 = @ScriptDir & "\" & $theme & "\" & $cat & "\16\" & $file & ".png"
    $file_16_svg = StringTrimRight($file_16, 3) & "svg"
-   $file_22 = @ScriptDir & "\" & $theme & "\" & $cat & "\22\" & $file
+   $file_22 = @ScriptDir & "\" & $theme & "\" & $cat & "\22\" & $file & ".png"
    $file_22_svg = StringTrimRight($file_22, 3) & "svg"
-   $file_24 = @ScriptDir & "\" & $theme & "\" & $cat & "\24\" & $file
+   $file_24 = @ScriptDir & "\" & $theme & "\" & $cat & "\24\" & $file & ".png"
    $file_24_svg = StringTrimRight($file_24, 3) & "svg"
-   $file_32 = @ScriptDir & "\" & $theme & "\" & $cat & "\32\" & $file
+   $file_32 = @ScriptDir & "\" & $theme & "\" & $cat & "\32\" & $file & ".png"
    $file_32_svg = StringTrimRight($file_32, 3) & "svg"
-   $file_48 = @ScriptDir & "\" & $theme & "\" & $cat & "\48\" & $file
+   $file_48 = @ScriptDir & "\" & $theme & "\" & $cat & "\48\" & $file & ".png"
    $file_48_svg = StringTrimRight($file_48, 3) & "svg"
-   $file_64 = @ScriptDir & "\" & $theme & "\" & $cat & "\64\" & $file
+   $file_64 = @ScriptDir & "\" & $theme & "\" & $cat & "\64\" & $file & ".png"
    $file_64_svg = StringTrimRight($file_64, 3) & "svg"
-   $file_128 = @ScriptDir & "\" & $theme & "\" & $cat & "\128\" & $file
+   $file_128 = @ScriptDir & "\" & $theme & "\" & $cat & "\128\" & $file & ".png"
    $file_128_svg = StringTrimRight($file_128, 3) & "svg"
-   $file_256 = @ScriptDir & "\" & $theme & "\" & $cat & "\256\" & $file
+   $file_256 = @ScriptDir & "\" & $theme & "\" & $cat & "\256\" & $file & ".png"
    $file_256_svg = StringTrimRight($file_256, 3) & "svg"
 
    $file_16_html = ""
@@ -353,72 +353,72 @@ Func code_Content($file, $cat)
 
    ;image links; prefer SVG before PNG
    If FileExists($file_16_svg) Then
-	  $file_16_html = '<img src="' & $prefix & $cat & "/16/" & StringTrimRight($file, 3) & "svg" & '" style="border-style: none;" align="absmiddle">'
+	  $file_16_html = '<img src="' & $prefix & $cat & "/16/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
    ElseIf FileExists($file_16) Then
-	  $file_16_html = '<img src="' & $prefix & $cat & "/16/" & $file & '" style="border-style: none;" align="absmiddle">'
+	  $file_16_html = '<img src="' & $prefix & $cat & "/16/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
    EndIf
 
    If FileExists($file_22_svg) Then
-	  $file_22_html = '<img src="' & $prefix & $cat & "/22/" & StringTrimRight($file, 3) & "svg" & '" style="border-style: none;" align="absmiddle">'
+	  $file_22_html = '<img src="' & $prefix & $cat & "/22/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
    ElseIf FileExists($file_22) Then
-	  $file_22_html = '<img src="' & $prefix & $cat & "/22/" & $file & '" style="border-style: none;" align="absmiddle">'
+	  $file_22_html = '<img src="' & $prefix & $cat & "/22/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
    EndIf
 
    If FileExists($file_24_svg) Then
-	  $file_24_html = '<img src="' & $prefix & $cat & "/24/" & StringTrimRight($file, 3) & "svg" & '" style="border-style: none;" align="absmiddle">'
+	  $file_24_html = '<img src="' & $prefix & $cat & "/24/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
    ElseIf FileExists($file_24) Then
-	  $file_24_html = '<img src="' & $prefix & $cat & "/24/" & $file & '" style="border-style: none;" align="absmiddle">'
+	  $file_24_html = '<img src="' & $prefix & $cat & "/24/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
    EndIf
 
    If FileExists($file_32_svg) Then
-	  $file_32_html = '<img src="' & $prefix & $cat & "/32/" & StringTrimRight($file, 3) & "svg" & '" style="border-style: none;" align="absmiddle">'
+	  $file_32_html = '<img src="' & $prefix & $cat & "/32/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
    ElseIf FileExists($file_32) Then
-	  $file_32_html = '<img src="' & $prefix & $cat & "/32/" & $file & '" style="border-style: none;" align="absmiddle">'
+	  $file_32_html = '<img src="' & $prefix & $cat & "/32/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
    EndIf
 
    If FileExists($file_48_svg) Then
-	  $file_48_html = '<img src="' & $prefix & $cat & "/48/" & StringTrimRight($file, 3) & "svg" & '" style="border-style: none;" align="absmiddle">'
+	  $file_48_html = '<img src="' & $prefix & $cat & "/48/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
    ElseIf FileExists($file_48) Then
-	  $file_48_html = '<img src="' & $prefix & $cat & "/48/" & $file & '" style="border-style: none;" align="absmiddle">'
+	  $file_48_html = '<img src="' & $prefix & $cat & "/48/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
    EndIf
 
    If FileExists($file_64_svg) Then
-	  $file_64_html = '<img src="' & $prefix & $cat & "/64/" & StringTrimRight($file, 3) & "svg" & '" style="border-style: none;" align="absmiddle">'
+	  $file_64_html = '<img src="' & $prefix & $cat & "/64/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
    ElseIf FileExists($file_64) Then
-	  $file_64_html = '<img src="' & $prefix & $cat & "/64/" & $file & '" style="border-style: none;" align="absmiddle">'
+	  $file_64_html = '<img src="' & $prefix & $cat & "/64/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
    EndIf
 
    If FileExists($file_128_svg) Then
-	  $file_128_html = '<img src="' & $prefix & $cat & "/128/" & StringTrimRight($file, 3) & "svg" & '" style="border-style: none;" align="absmiddle">'
+	  $file_128_html = '<img src="' & $prefix & $cat & "/128/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
    ElseIf FileExists($file_128) Then
-	  $file_128_html = '<img src="' & $prefix & $cat & "/128/" & $file & '" style="border-style: none;" align="absmiddle">'
+	  $file_128_html = '<img src="' & $prefix & $cat & "/128/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
    EndIf
 
    If FileExists($file_256_svg) Then
-	  $file_256_html = '<img src="' & $prefix & $cat & "/256/" & StringTrimRight($file, 3) & "svg" & '" style="border-style: none;" align="absmiddle">'
+	  $file_256_html = '<img src="' & $prefix & $cat & "/256/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
    ElseIf FileExists($file_256) Then
-	  $file_256_html = '<img src="' & $prefix & $cat & "/256/" & $file & '" style="border-style: none;" align="absmiddle">'
+	  $file_256_html = '<img src="' & $prefix & $cat & "/256/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
    EndIf
 
 
    If $mode = "compare" Then ;compare mode
 
 	  ;Theme B
-	  $file_16_B = @ScriptDir & "\" & $themeB & "\" & $cat & "\16\" & $file
+	  $file_16_B = @ScriptDir & "\" & $themeB & "\" & $cat & "\16\" & $file & ".png"
 	  $file_16_svg_B = StringTrimRight($file_16_B, 3) & "svg"
-	  $file_22_B = @ScriptDir & "\" & $themeB & "\" & $cat & "\22\" & $file
+	  $file_22_B = @ScriptDir & "\" & $themeB & "\" & $cat & "\22\" & $file & ".png"
 	  $file_22_svg_B = StringTrimRight($file_22_B, 3) & "svg"
-	  $file_24_B = @ScriptDir & "\" & $themeB & "\" & $cat & "\24\" & $file
+	  $file_24_B = @ScriptDir & "\" & $themeB & "\" & $cat & "\24\" & $file & ".png"
 	  $file_24_svg_B = StringTrimRight($file_24_B, 3) & "svg"
-	  $file_32_B = @ScriptDir & "\" & $themeB & "\" & $cat & "\32\" & $file
+	  $file_32_B = @ScriptDir & "\" & $themeB & "\" & $cat & "\32\" & $file & ".png"
 	  $file_32_svg_B = StringTrimRight($file_32_B, 3) & "svg"
-	  $file_48_B = @ScriptDir & "\" & $themeB & "\" & $cat & "\48\" & $file
+	  $file_48_B = @ScriptDir & "\" & $themeB & "\" & $cat & "\48\" & $file & ".png"
 	  $file_48_svg_B = StringTrimRight($file_48_B, 3) & "svg"
-	  $file_64_B = @ScriptDir & "\" & $themeB & "\" & $cat & "\64\" & $file
+	  $file_64_B = @ScriptDir & "\" & $themeB & "\" & $cat & "\64\" & $file & ".png"
 	  $file_64_svg_B = StringTrimRight($file_64_B, 3) & "svg"
-	  $file_128_B = @ScriptDir & "\" & $themeB & "\" & $cat & "\128\" & $file
+	  $file_128_B = @ScriptDir & "\" & $themeB & "\" & $cat & "\128\" & $file & ".png"
 	  $file_128_svg_B = StringTrimRight($file_128_B, 3) & "svg"
-	  $file_256_B = @ScriptDir & "\" & $themeB & "\" & $cat & "\256\" & $file
+	  $file_256_B = @ScriptDir & "\" & $themeB & "\" & $cat & "\256\" & $file & ".png"
 	  $file_256_svg_B = StringTrimRight($file_256_B, 3) & "svg"
 
 	  $file_16_html_B = ""
@@ -432,56 +432,56 @@ Func code_Content($file, $cat)
 
 	  ;image links; prefer SVG before PNG
 	  If FileExists($file_16_svg_B) Then
-		 $file_16_html_B = '<img src="' & $themeB & "/" & $cat & "/16/" & StringTrimRight($file, 3) & "svg" & '" style="border-style: none;" align="absmiddle">'
+		 $file_16_html_B = '<img src="' & $themeB & "/" & $cat & "/16/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
 	  ElseIf FileExists($file_16_B) Then
-		 $file_16_html_B = '<img src="' & $themeB & "/" & $cat & "/16/" & $file & '" style="border-style: none;" align="absmiddle">'
+		 $file_16_html_B = '<img src="' & $themeB & "/" & $cat & "/16/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
 	  EndIf
 
 	  If FileExists($file_22_svg_B) Then
-		 $file_22_html_B = '<img src="' & $themeB & "/" & $cat & "/22/" & StringTrimRight($file, 3) & "svg" & '" style="border-style: none;" align="absmiddle">'
+		 $file_22_html_B = '<img src="' & $themeB & "/" & $cat & "/22/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
 	  ElseIf FileExists($file_22_B) Then
-		 $file_22_html_B = '<img src="' & $themeB & "/" & $cat & "/22/" & $file & '" style="border-style: none;" align="absmiddle">'
+		 $file_22_html_B = '<img src="' & $themeB & "/" & $cat & "/22/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
 	  EndIf
 
 	  If FileExists($file_24_svg_B) Then
-		 $file_24_html_B = '<img src="' & $themeB & "/" & $cat & "/24/" & StringTrimRight($file, 3) & "svg" & '" style="border-style: none;" align="absmiddle">'
+		 $file_24_html_B = '<img src="' & $themeB & "/" & $cat & "/24/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
 	  ElseIf FileExists($file_24_B) Then
-		 $file_24_html_B = '<img src="' & $themeB & "/" & $cat & "/24/" & $file & '" style="border-style: none;" align="absmiddle">'
+		 $file_24_html_B = '<img src="' & $themeB & "/" & $cat & "/24/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
 	  EndIf
 
 	  If FileExists($file_32_svg_B) Then
-		 $file_32_html_B = '<img src="' & $themeB & "/" & $cat & "/32/" & StringTrimRight($file, 3) & "svg" & '" style="border-style: none;" align="absmiddle">'
+		 $file_32_html_B = '<img src="' & $themeB & "/" & $cat & "/32/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
 	  ElseIf FileExists($file_32_B) Then
-		 $file_32_html_B = '<img src="' & $themeB & "/" & $cat & "/32/" & $file & '" style="border-style: none;" align="absmiddle">'
+		 $file_32_html_B = '<img src="' & $themeB & "/" & $cat & "/32/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
 	  EndIf
 
 	  If FileExists($file_48_svg_B) Then
-		 $file_48_html_B = '<img src="' & $themeB & "/" & $cat & "/48/" & StringTrimRight($file, 3) & "svg" & '" style="border-style: none;" align="absmiddle">'
+		 $file_48_html_B = '<img src="' & $themeB & "/" & $cat & "/48/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
 	  ElseIf FileExists($file_48_B) Then
-		 $file_48_html_B = '<img src="' & $themeB & "/" & $cat & "/48/" & $file & '" style="border-style: none;" align="absmiddle">'
+		 $file_48_html_B = '<img src="' & $themeB & "/" & $cat & "/48/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
 	  EndIf
 
 	  If FileExists($file_64_svg_B) Then
-		 $file_64_html_B = '<img src="' & $themeB & "/" & $cat & "/64/" & StringTrimRight($file, 3) & "svg" & '" style="border-style: none;" align="absmiddle">'
+		 $file_64_html_B = '<img src="' & $themeB & "/" & $cat & "/64/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
 	  ElseIf FileExists($file_64_B) Then
-		 $file_64_html_B = '<img src="' & $themeB & "/" & $cat & "/64/" & $file & '" style="border-style: none;" align="absmiddle">'
+		 $file_64_html_B = '<img src="' & $themeB & "/" & $cat & "/64/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
 	  EndIf
 
 	  If FileExists($file_128_svg_B) Then
-		 $file_128_html_B = '<img src="' & $themeB & "/" & $cat & "/128/" & StringTrimRight($file, 3) & "svg" & '" style="border-style: none;" align="absmiddle">'
+		 $file_128_html_B = '<img src="' & $themeB & "/" & $cat & "/128/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
 	  ElseIf FileExists($file_128_B) Then
-		 $file_128_html_B = '<img src="' & $themeB & "/" & $cat & "/128/" & $file & '" style="border-style: none;" align="absmiddle">'
+		 $file_128_html_B = '<img src="' & $themeB & "/" & $cat & "/128/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
 	  EndIf
 
 	  If FileExists($file_256_svg_B) Then
-		 $file_256_html_B = '<img src="' & $themeB & "/" & $cat & "/256/" & StringTrimRight($file, 3) & "svg" & '" style="border-style: none;" align="absmiddle">'
+		 $file_256_html_B = '<img src="' & $themeB & "/" & $cat & "/256/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
 	  ElseIf FileExists($file_256_B) Then
-		 $file_256_html_B = '<img src="' & $themeB & "/" & $cat & "/256/" & $file & '" style="border-style: none;" align="absmiddle">'
+		 $file_256_html_B = '<img src="' & $themeB & "/" & $cat & "/256/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
 	  EndIf
 
 
 	  $code_Content =   '<tr>' & @LF & _
-					 '  <td valign="left"><span class="grey">- ' & StringTrimRight($file, 4) & '</span></td>' & @LF & _
+					 '  <td valign="left"><span class="grey">- ' & file & '</span></td>' & @LF & _
 					 '  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & $file_16_html & '</td>' & @LF & _
 					 '  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & $file_22_html & '</td>' & @LF & _
 					 '  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & $file_24_html & '</td>' & @LF & _
@@ -503,7 +503,7 @@ Func code_Content($file, $cat)
 
    Else ;single mode
 	  $code_Content =   '<tr>' & @LF & _
-					 '  <td valign="left"><span class="grey">- ' & StringTrimRight($file, 4) & '</span></td>' & @LF & _
+					 '  <td valign="left"><span class="grey">- ' & $file & '</span></td>' & @LF & _
 					 '  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & $file_16_html & '</td>' & @LF & _
 					 '  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & $file_22_html & '</td>' & @LF & _
 					 '  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & $file_24_html & '</td>' & @LF & _
@@ -520,18 +520,32 @@ Func code_Content($file, $cat)
 EndFunc
 
 Func code_Content_GC($file, $cat)
-   If not FileExists(@ScriptDir & "\" & $theme & "\" & $cat & "\48\brave\" & $file) Then ;common icons
-	  $file_16 = @ScriptDir & "\" & $theme & "\" & $cat & "\16\" & $file
-	  $file_22 = @ScriptDir & "\" & $theme & "\" & $cat & "\22\" & $file
+   If $mode = "compare" Then
+	  $prefix = $theme & "/"
+   Else
+	  $prefix = ""
+   EndIf
+
+   If not FileExists(@ScriptDir & "\" & $theme & "\" & $cat & "\48\brave\" & $file & ".svg") or not FileExists(@ScriptDir & "\" & $theme & "\" & $cat & "\48\brave\" & $file & ".png") Then ;common icons
+	  $code_Content = code_Content($file, $cat)
+
+   Else ;colored icons
+	  $file_16 = @ScriptDir & "\" & $theme & "\" & $cat & "\16\brave\" & $file & ".png"
+	  $file_16_svg = StringTrimRight($file_16, 3) & "svg"
+	  $file_22 = @ScriptDir & "\" & $theme & "\" & $cat & "\22\brave\" & $file & ".png"
 	  $file_22_svg = StringTrimRight($file_22, 3) & "svg"
-	  $file_24 = @ScriptDir & "\" & $theme & "\" & $cat & "\24\" & $file
-	  $file_32 = @ScriptDir & "\" & $theme & "\" & $cat & "\32\" & $file
-	  $file_48 = @ScriptDir & "\" & $theme & "\" & $cat & "\48\" & $file
-	  $file_64 = @ScriptDir & "\" & $theme & "\" & $cat & "\64\" & $file
+	  $file_24 = @ScriptDir & "\" & $theme & "\" & $cat & "\24\brave\" & $file & ".png"
+	  $file_24_svg = StringTrimRight($file_24, 3) & "svg"
+	  $file_32 = @ScriptDir & "\" & $theme & "\" & $cat & "\32\brave\" & $file & ".png"
+	  $file_32_svg = StringTrimRight($file_32, 3) & "svg"
+	  $file_48 = @ScriptDir & "\" & $theme & "\" & $cat & "\48\brave\" & $file & ".png"
+	  $file_48_svg = StringTrimRight($file_48, 3) & "svg"
+	  $file_64 = @ScriptDir & "\" & $theme & "\" & $cat & "\64\brave\" & $file & ".png"
 	  $file_64_svg = StringTrimRight($file_64, 3) & "svg"
-	  $file_128 = @ScriptDir & "\" & $theme & "\" & $cat & "\128\" & $file
+	  $file_128 = @ScriptDir & "\" & $theme & "\" & $cat & "\128\brave\" & $file & ".png"
 	  $file_128_svg = StringTrimRight($file_128, 3) & "svg"
-	  $file_256 = @ScriptDir & "\" & $theme & "\" & $cat & "\256\" & $file
+	  $file_256 = @ScriptDir & "\" & $theme & "\" & $cat & "\256\brave\" & $file & ".png"
+	  $file_256_svg = StringTrimRight($file_256, 3) & "svg"
 
 	  $file_16_html = ""
 	  $file_22_html = ""
@@ -542,34 +556,58 @@ Func code_Content_GC($file, $cat)
 	  $file_128_html = ""
 	  $file_256_html = ""
 
-	  ;standard sizes only PNG
-	  If FileExists($file_16) Then $file_16_html = '<img src="' & $cat & "/16/" & $file & '" style="border-style: none;" align="absmiddle">'
-	  If FileExists($file_24) Then $file_24_html = '<img src="' & $cat & "/24/" & $file & '" style="border-style: none;" align="absmiddle">'
-	  If FileExists($file_32) Then $file_32_html = '<img src="' & $cat & "/32/" & $file & '" style="border-style: none;" align="absmiddle">'
-	  If FileExists($file_48) Then $file_48_html = '<img src="' & $cat & "/48/" & $file & '" style="border-style: none;" align="absmiddle">'
-	  If FileExists($file_256) Then $file_256_html = '<img src="' & $cat & "/256/" & $file & '" style="border-style: none;" align="absmiddle">'
-
-	  ;misc sizes also SVG
-	  If FileExists($file_22) Then
-		 $file_22_html = '<img src="' & $cat & "/22/" & $file & '" style="border-style: none;" align="absmiddle">'
-	  ElseIf FileExists($file_22_svg) Then
-		 $file_22_html = '<img src="' & $cat & "/22/" & StringTrimRight($file, 3) & "svg" & '" style="border-style: none;" align="absmiddle">'
+	  ;image links; prefer SVG before PNG
+	  If FileExists($file_16_svg) Then
+		 $file_16_html = '<img src="' & $prefix & $cat & "/16/brave/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
+	  ElseIf FileExists($file_16) Then
+		 $file_16_html = '<img src="' & $prefix & $cat & "/16/brave/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
 	  EndIf
 
-	  If FileExists($file_64) Then
-		 $file_64_html = '<img src="' & $cat & "/64/" & $file & '" style="border-style: none;" align="absmiddle">'
-	  ElseIf FileExists($file_64_svg) Then
-		 $file_64_html = '<img src="' & $cat & "/64/" & StringTrimRight($file, 3) & "svg" & '" style="border-style: none;" align="absmiddle">'
+	  If FileExists($file_22_svg) Then
+		 $file_22_html = '<img src="' & $prefix & $cat & "/22/brave/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
+	  ElseIf FileExists($file_22) Then
+		 $file_22_html = '<img src="' & $prefix & $cat & "/22/brave/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
 	  EndIf
 
-	  If FileExists($file_128) Then
-		 $file_128_html = '<img src="' & $cat & "/128/" & $file & '" style="border-style: none;" align="absmiddle">'
-	  ElseIf FileExists($file_128_svg) Then
-		 $file_128_html = '<img src="' & $cat & "/128/" & StringTrimRight($file, 3) & "svg" & '" style="border-style: none;" align="absmiddle">'
+	  If FileExists($file_24_svg) Then
+		 $file_24_html = '<img src="' & $prefix & $cat & "/24/brave/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
+	  ElseIf FileExists($file_24) Then
+		 $file_24_html = '<img src="' & $prefix & $cat & "/24/brave/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
 	  EndIf
+
+	  If FileExists($file_32_svg) Then
+		 $file_32_html = '<img src="' & $prefix & $cat & "/32/brave/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
+	  ElseIf FileExists($file_32) Then
+		 $file_32_html = '<img src="' & $prefix & $cat & "/32/brave/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
+	  EndIf
+
+	  If FileExists($file_48_svg) Then
+		 $file_48_html = '<img src="' & $prefix & $cat & "/48/brave/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
+	  ElseIf FileExists($file_48) Then
+		 $file_48_html = '<img src="' & $prefix & $cat & "/48/brave/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
+	  EndIf
+
+	  If FileExists($file_64_svg) Then
+		 $file_64_html = '<img src="' & $prefix & $cat & "/64/brave/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
+	  ElseIf FileExists($file_64) Then
+		 $file_64_html = '<img src="' & $prefix & $cat & "/64/brave/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
+	  EndIf
+
+	  If FileExists($file_128_svg) Then
+		 $file_128_html = '<img src="' & $prefix & $cat & "/128/brave/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
+	  ElseIf FileExists($file_128) Then
+		 $file_128_html = '<img src="' & $prefix & $cat & "/128/brave/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
+	  EndIf
+
+	  If FileExists($file_256_svg) Then
+		 $file_256_html = '<img src="' & $prefix & $cat & "/256/brave/" & $file & ".svg" & '" style="border-style: none;" align="absmiddle">'
+	  ElseIf FileExists($file_256) Then
+		 $file_256_html = '<img src="' & $prefix & $cat & "/256/brave/" & $file & ".png" & '" style="border-style: none;" align="absmiddle">'
+	  EndIf
+
 
 	  $code_Content =   '<tr>' & @LF & _
-						'  <td valign="left"><span class="grey">- ' & StringTrimRight($file, 4) & '</span></td>' & @LF & _
+						'  <td valign="left"><span class="grey">- ' & $file & '(brave)</span></td>' & @LF & _
 						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & $file_16_html & '</td>' & @LF & _
 						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & $file_22_html & '</td>' & @LF & _
 						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & $file_24_html & '</td>' & @LF & _
@@ -578,67 +616,96 @@ Func code_Content_GC($file, $cat)
 						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & $file_64_html & '</td>' & @LF & _
 						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & $file_128_html & '</td>' & @LF & _
 						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & $file_256_html & '</td>' & @LF & _
+						'</tr>' & @LF & _
+						'<tr>' & @LF & _
+						'  <td valign="left"><span class="grey">- ' & $file & '(carbonite)</span></td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_16_html, "/brave/", "/carbonite/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_22_html, "/brave/", "/carbonite/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_24_html, "/brave/", "/carbonite/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_32_html, "/brave/", "/carbonite/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_48_html, "/brave/", "/carbonite/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_64_html, "/brave/", "/carbonite/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_128_html, "/brave/", "/carbonite/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_256_html, "/brave/", "/carbonite/") & '</td>' & @LF & _
+						'</tr>' & @LF & _
+						'<tr>' & @LF & _
+						'  <td valign="left"><span class="grey">- ' & $file & '(dust)</span></td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_16_html, "/brave/", "/dust/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_22_html, "/brave/", "/dust/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_24_html, "/brave/", "/dust/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_32_html, "/brave/", "/dust/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_48_html, "/brave/", "/dust/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_64_html, "/brave/", "/dust/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_128_html, "/brave/", "/dust/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_256_html, "/brave/", "/dust/") & '</td>' & @LF & _
+						'</tr>' & @LF & _
+						'<tr>' & @LF & _
+						'  <td valign="left"><span class="grey">- ' & $file & '(human)</span></td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_16_html, "/brave/", "/human/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_22_html, "/brave/", "/human/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_24_html, "/brave/", "/human/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_32_html, "/brave/", "/human/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_48_html, "/brave/", "/human/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_64_html, "/brave/", "/human/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_128_html, "/brave/", "/human/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_256_html, "/brave/", "/human/") & '</td>' & @LF & _
+						'</tr>' & @LF & _
+						'<tr>' & @LF & _
+						'  <td valign="left"><span class="grey">- ' & $file & '(illustrious)</span></td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_16_html, "/brave/", "/illustrious/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_22_html, "/brave/", "/illustrious/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_24_html, "/brave/", "/illustrious/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_32_html, "/brave/", "/illustrious/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_48_html, "/brave/", "/illustrious/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_64_html, "/brave/", "/illustrious/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_128_html, "/brave/", "/illustrious/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_256_html, "/brave/", "/illustrious/") & '</td>' & @LF & _
+						'</tr>' & @LF & _
+						'<tr>' & @LF & _
+						'  <td valign="left"><span class="grey">- ' & $file & '(noble)</span></td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_16_html, "/brave/", "/noble/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_22_html, "/brave/", "/noble/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_24_html, "/brave/", "/noble/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_32_html, "/brave/", "/noble/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_48_html, "/brave/", "/noble/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_64_html, "/brave/", "/noble/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_128_html, "/brave/", "/noble/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_256_html, "/brave/", "/noble/") & '</td>' & @LF & _
+						'</tr>' & @LF & _
+						'<tr>' & @LF & _
+						'  <td valign="left"><span class="grey">- ' & $file & '(tribute)</span></td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_16_html, "/brave/", "/tribute/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_22_html, "/brave/", "/tribute/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_24_html, "/brave/", "/tribute/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_32_html, "/brave/", "/tribute/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_48_html, "/brave/", "/tribute/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_64_html, "/brave/", "/tribute/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_128_html, "/brave/", "/tribute/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_256_html, "/brave/", "/tribute/") & '</td>' & @LF & _
+						'</tr>' & @LF & _
+						'<tr>' & @LF & _
+						'  <td valign="left"><span class="grey">- ' & $file & '(wine)</span></td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_16_html, "/brave/", "/wine/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_22_html, "/brave/", "/wine/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_24_html, "/brave/", "/wine/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_32_html, "/brave/", "/wine/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_48_html, "/brave/", "/wine/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_64_html, "/brave/", "/wine/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_128_html, "/brave/", "/wine/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_256_html, "/brave/", "/wine/") & '</td>' & @LF & _
+						'</tr>' & @LF & _
+						'<tr>' & @LF & _
+						'  <td valign="left"><span class="grey">- ' & $file & '(wise)</span></td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_16_html, "/brave/", "/wise/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_22_html, "/brave/", "/wise/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_24_html, "/brave/", "/wise/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_32_html, "/brave/", "/wise/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_48_html, "/brave/", "/wise/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_64_html, "/brave/", "/wise/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_128_html, "/brave/", "/wise/") & '</td>' & @LF & _
+						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & StringReplace($file_256_html, "/brave/", "/wise/") & '</td>' & @LF & _
 						'</tr>' & @LF
 
-   Else ;colored icons
-	  $file_16 = @ScriptDir & "\" & $theme & "\" & $cat & "\16\brave\" & $file
-	  $file_22 = @ScriptDir & "\" & $theme & "\" & $cat & "\22\brave\" & $file
-	  $file_22_svg = StringTrimRight($file_22, 3) & "svg"
-	  $file_24 = @ScriptDir & "\" & $theme & "\" & $cat & "\24\brave\" & $file
-	  $file_32 = @ScriptDir & "\" & $theme & "\" & $cat & "\32\brave\" & $file
-	  $file_48 = @ScriptDir & "\" & $theme & "\" & $cat & "\48\brave\" & $file
-	  $file_64 = @ScriptDir & "\" & $theme & "\" & $cat & "\64\brave\" & $file
-	  $file_64_svg = StringTrimRight($file_64, 3) & "svg"
-	  $file_128 = @ScriptDir & "\" & $theme & "\" & $cat & "\128\brave\" & $file
-	  $file_128_svg = StringTrimRight($file_128, 3) & "svg"
-	  $file_256 = @ScriptDir & "\" & $theme & "\" & $cat & "\256\brave\" & $file
-
-	  $file_16_html = ""
-	  $file_22_html = ""
-	  $file_24_html = ""
-	  $file_32_html = ""
-	  $file_48_html = ""
-	  $file_64_html = ""
-	  $file_128_html = ""
-	  $file_256_html = ""
-
-	  ;standard sizes only PNG
-	  If FileExists($file_16) Then $file_16_html = '<img src="' & $cat & "/16/brave/" & $file & '" style="border-style: none;" align="absmiddle">'
-	  If FileExists($file_24) Then $file_24_html = '<img src="' & $cat & "/24/brave/" & $file & '" style="border-style: none;" align="absmiddle">'
-	  If FileExists($file_32) Then $file_32_html = '<img src="' & $cat & "/32/brave/" & $file & '" style="border-style: none;" align="absmiddle">'
-	  If FileExists($file_48) Then $file_48_html = '<img src="' & $cat & "/48/brave/" & $file & '" style="border-style: none;" align="absmiddle">'
-	  If FileExists($file_256) Then $file_256_html = '<img src="' & $cat & "/256/brave/" & $file & '" style="border-style: none;" align="absmiddle">'
-
-	  ;misc sizes also SVG
-	  If FileExists($file_22) Then
-		 $file_22_html = '<img src="' & $cat & "/22/brave/" & $file & '" style="border-style: none;" align="absmiddle">'
-	  ElseIf FileExists($file_22_svg) Then
-		 $file_22_html = '<img src="' & $cat & "/22/brave/" & StringTrimRight($file, 3) & "svg" & '" style="border-style: none;" align="absmiddle">'
-	  EndIf
-
-	  If FileExists($file_64) Then
-		 $file_64_html = '<img src="' & $cat & "/64/brave/" & $file & '" style="border-style: none;" align="absmiddle">'
-	  ElseIf FileExists($file_64_svg) Then
-		 $file_64_html = '<img src="' & $cat & "/64/brave/" & StringTrimRight($file, 3) & "svg" & '" style="border-style: none;" align="absmiddle">'
-	  EndIf
-
-	  If FileExists($file_128) Then
-		 $file_128_html = '<img src="' & $cat & "/128/brave/" & $file & '" style="border-style: none;" align="absmiddle">'
-	  ElseIf FileExists($file_128_svg) Then
-		 $file_128_html = '<img src="' & $cat & "/128/brave/" & StringTrimRight($file, 3) & "svg" & '" style="border-style: none;" align="absmiddle">'
-	  EndIf
-
-	  $code_Content =   '<tr>' & @LF & _
-						'  <td valign="left"><span class="grey">- ' & StringTrimRight($file, 4) & '</span></td>' & @LF & _
-						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & $file_16_html & '<br>' & StringReplace($file_16_html, "/brave/", "/carbonite/") & '<br>' & StringReplace($file_16_html, "/brave/", "/dust/") & '<br>' & StringReplace($file_16_html, "/brave/", "/human/") & '<br>' & StringReplace($file_16_html, "/brave/", "/illustrious/") & '<br>' & StringReplace($file_16_html, "/brave/", "/noble/") & '<br>' & StringReplace($file_16_html, "/brave/", "/tribute/") & '<br>' & StringReplace($file_16_html, "/brave/", "/wine/") & '<br>' & StringReplace($file_16_html, "/brave/", "/wise/") & '</td>' & @LF & _
-						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & $file_22_html & '<br>' & StringReplace($file_22_html, "/brave/", "/carbonite/") & '<br>' & StringReplace($file_22_html, "/brave/", "/dust/") & '<br>' & StringReplace($file_22_html, "/brave/", "/human/") & '<br>' & StringReplace($file_22_html, "/brave/", "/illustrious/") & '<br>' & StringReplace($file_22_html, "/brave/", "/noble/") & '<br>' & StringReplace($file_22_html, "/brave/", "/tribute/") & '<br>' & StringReplace($file_22_html, "/brave/", "/wine/") & '<br>' & StringReplace($file_22_html, "/brave/", "/wise/") & '</td>' & @LF & _
-						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & $file_24_html & '<br>' & StringReplace($file_24_html, "/brave/", "/carbonite/") & '<br>' & StringReplace($file_24_html, "/brave/", "/dust/") & '<br>' & StringReplace($file_24_html, "/brave/", "/human/") & '<br>' & StringReplace($file_24_html, "/brave/", "/illustrious/") & '<br>' & StringReplace($file_24_html, "/brave/", "/noble/") & '<br>' & StringReplace($file_24_html, "/brave/", "/tribute/") & '<br>' & StringReplace($file_24_html, "/brave/", "/wine/") & '<br>' & StringReplace($file_24_html, "/brave/", "/wise/") & '</td>' & @LF & _
-						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & $file_32_html & '<br>' & StringReplace($file_32_html, "/brave/", "/carbonite/") & '<br>' & StringReplace($file_32_html, "/brave/", "/dust/") & '<br>' & StringReplace($file_32_html, "/brave/", "/human/") & '<br>' & StringReplace($file_32_html, "/brave/", "/illustrious/") & '<br>' & StringReplace($file_32_html, "/brave/", "/noble/") & '<br>' & StringReplace($file_32_html, "/brave/", "/tribute/") & '<br>' & StringReplace($file_32_html, "/brave/", "/wine/") & '<br>' & StringReplace($file_32_html, "/brave/", "/wise/") & '</td>' & @LF & _
-						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & $file_48_html & '<br>' & StringReplace($file_48_html, "/brave/", "/carbonite/") & '<br>' & StringReplace($file_48_html, "/brave/", "/dust/") & '<br>' & StringReplace($file_48_html, "/brave/", "/human/") & '<br>' & StringReplace($file_48_html, "/brave/", "/illustrious/") & '<br>' & StringReplace($file_48_html, "/brave/", "/noble/") & '<br>' & StringReplace($file_48_html, "/brave/", "/tribute/") & '<br>' & StringReplace($file_48_html, "/brave/", "/wine/") & '<br>' & StringReplace($file_48_html, "/brave/", "/wise/") & '</td>' & @LF & _
-						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & $file_64_html & '<br>' & StringReplace($file_64_html, "/brave/", "/carbonite/") & '<br>' & StringReplace($file_64_html, "/brave/", "/dust/") & '<br>' & StringReplace($file_64_html, "/brave/", "/human/") & '<br>' & StringReplace($file_64_html, "/brave/", "/illustrious/") & '<br>' & StringReplace($file_64_html, "/brave/", "/noble/") & '<br>' & StringReplace($file_64_html, "/brave/", "/tribute/") & '<br>' & StringReplace($file_64_html, "/brave/", "/wine/") & '<br>' & StringReplace($file_64_html, "/brave/", "/wise/") & '</td>' & @LF & _
-						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & $file_128_html & '<br>' & StringReplace($file_128_html, "/brave/", "/carbonite/") & '<br>' & StringReplace($file_128_html, "/brave/", "/dust/") & '<br>' & StringReplace($file_128_html, "/brave/", "/human/") & '<br>' & StringReplace($file_128_html, "/brave/", "/illustrious/") & '<br>' & StringReplace($file_128_html, "/brave/", "/noble/") & '<br>' & StringReplace($file_128_html, "/brave/", "/tribute/") & '<br>' & StringReplace($file_128_html, "/brave/", "/wine/") & '<br>' & StringReplace($file_128_html, "/brave/", "/wise/") & '</td>' & @LF & _
-						'  <td valign="middle" style="background-color: rgb(102, 102, 102);">' & $file_256_html & '<br>' & StringReplace($file_256_html, "/brave/", "/carbonite/") & '<br>' & StringReplace($file_256_html, "/brave/", "/dust/") & '<br>' & StringReplace($file_256_html, "/brave/", "/human/") & '<br>' & StringReplace($file_256_html, "/brave/", "/illustrious/") & '<br>' & StringReplace($file_256_html, "/brave/", "/noble/") & '<br>' & StringReplace($file_256_html, "/brave/", "/tribute/") & '<br>' & StringReplace($file_256_html, "/brave/", "/wine/") & '<br>' & StringReplace($file_256_html, "/brave/", "/wise/") & '</td>' & @LF & _
-						'</tr>' & @LF
    EndIf
 
    Return $code_Content
@@ -681,7 +748,7 @@ Func _RecursiveFileListToArray($sPath, $sPattern, $iFlag = 0, $iFormat = 1, $sDe
             $sReturn &= _RecursiveFileListToArray($sPath & $sFile & '\', $sPattern, $iFlag, 0)
             ContinueLoop
         EndIf
-        If StringRegExp($sFile, $sPattern) And ($iFlag = 0 Or $iFlag = 1) Then $sReturn &= $sFile & $sDelim ;$sPath & $sFile & $sDelim
+        If StringRegExp($sFile, $sPattern) And ($iFlag = 0 Or $iFlag = 1) Then $sReturn &= StringTrimRight($sFile, 4) & $sDelim ;$sPath & $sFile & $sDelim
     WEnd
     FileClose($hSearch)
     If $iFormat Then Return StringSplit(StringTrimRight($sReturn, StringLen($sDelim)), $sDelim, $iFormat)
