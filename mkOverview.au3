@@ -526,7 +526,7 @@ Func code_Content_GC($file, $cat)
 	  $prefix = ""
    EndIf
 
-   If not FileExists(@ScriptDir & "\" & $theme & "\" & $cat & "\48\brave\" & $file & ".svg") or not FileExists(@ScriptDir & "\" & $theme & "\" & $cat & "\48\brave\" & $file & ".png") Then ;common icons
+   If not FileExists(@ScriptDir & "\" & $theme & "\" & $cat & "\48\brave\" & $file & ".svg") and not FileExists(@ScriptDir & "\" & $theme & "\" & $cat & "\48\brave\" & $file & ".png") Then ;common icons
 	  $code_Content = code_Content($file, $cat)
 
    Else ;colored icons

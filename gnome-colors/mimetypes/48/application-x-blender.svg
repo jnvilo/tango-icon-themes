@@ -14,7 +14,7 @@
    height="48px"
    id="svg10093"
    sodipodi:version="0.32"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="application-x-blender.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    version="1.1">
@@ -465,7 +465,7 @@
        inkscape:collect="always"
        id="linearGradient26-paper-sheet-orig-0-7">
       <stop
-         style="stop-color: rgb(0, 0, 0); stop-opacity: 0.554054;"
+         style="stop-color:rgb(0, 0, 0);stop-opacity:0.412"
          offset="0"
          id="stop30-paper-sheet-orig-8-4" />
       <stop
@@ -482,17 +482,17 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="9.8994949"
-     inkscape:cx="-3.3081479"
+     inkscape:cx="-25.379981"
      inkscape:cy="17.056473"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g12376"
      showgrid="true"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
-     inkscape:window-width="1680"
-     inkscape:window-height="985"
-     inkscape:window-x="0"
-     inkscape:window-y="25"
-     inkscape:window-maximized="0" />
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-5"
+     inkscape:window-y="-5"
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata10098">
     <rdf:RDF>
